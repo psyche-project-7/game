@@ -1,5 +1,5 @@
 In regards to testing and unit tests there are edit mode tests and play mode tests. Edit mode tests are tests that run and just look at scripts and testing logic. 
-Play mode tests are that actually run a scene or game to test physics, movement, animation, etc.
+Play mode tests are tests that actually run a scene or game to test physics, movement, animation, etc.
 
 We can specifically target WebGL in the pipeline and have it automatically build and generate artifacts. 
 
