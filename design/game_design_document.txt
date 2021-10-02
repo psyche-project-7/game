@@ -1,0 +1,61 @@
+Summary:
+The game concept is based around the Psyche Mission. We will implement a 2D game, where some phases may be side-to-side (side scroller)
+and some phases may be top down (but still 2D). The game will have some aspects that are educational and realistic to the psyche
+mission along with some that are not. In cases where the game deviates from reality it will either be obvious or indicated with text.
+The target audience is children ages 8 to adults. Even though we'll be building for WebGL to embed the game into a web page, the project
+will not be considering how the game is actually served, nor how the game will scale from the server load. The game is single player. 
+
+Gameplay:
+The game will have a minimum of two phases. The two required phases are the strategy phase and the flight mission phase. The third optional 
+phase of the game might involve landing on Psyche (this is not reflective of the actual Psyche mission and will be clarified as so 
+if we implement this phase). The main constraint for the player is time. The player has a defined launch date that they must meet, if the spacecraft
+is not ready by the launch date then we will either consider that a loss and the player restarts the game, or we may allow for launch with a significantly
+more difficult flight mission phase. We may consider monetary budget as an additional resource in the game but that is still to be decided.
+
+The strategy phase at a minimum will involve selecting components for the rockets where variations might be on steering mechanisms, electronic components,
+materials, and so on. We will also allow for some selection on the spacecraft (this will likely not be realistic to the actual spacecraft). The decisions
+the player makes in the strategy phase will impact the difficulty of the flight mission phase. Optionally the strategy phase might include some 
+aspects of logistics, such as acquiring components in time for the mission launch date. Optionally the strategy phase might include selecting the 
+crew (the crew selected might impact timing logistics, the integrity of how the spaceship is constructed, and how easily the spacecraft is controlled
+in the flight mission phase).  Its expected that the strategy phase will be 5-10 minutes for the player. The trade offs the player is expected to make
+will impact the following properties: weight of the spacecraft (which might impact time to reach Psyche and overall velocity), responsiveness of the 
+spacecraft, the amount of instrumentation the craft can carry, durability of the spacecraft
+
+The flight phase is much less about strategy and more about player reaction time and possibly aiming. Its expected that the spaceship will generally be following 
+the path it needs to reach the Psyche asteroid but the player will provide input to correct course when certain events occur. Examples of such events 
+are: gravitational pull from nearby moons, planets, or asteroids as well as collisions with micrometeorites. Of course these events are mostly 
+fabricated and not real issues to the Psyche mission. 
+
+The player is given a score at the end of the game that at a minimum will be based on how closely (in terms of time) the spacecraft reaches the Psyche
+asteroid to what was planned. For example, a player that reaches the Psyche asteroid on the same day that was originally planned will have a higher
+score than a player that was 2 days early or 2 days late. Other optional score impacting aspects we may consider are related to the health of the spacecraft
+or its instrumentation when it reaches the Psyche asteroid. Not reaching the Psyche Asteroid (either due to not launching the spacecraft at all, or failing
+to course correct) will result in a score of 0.
+
+
+
+UI:
+There will be an opening game menu, this menu at a minimum will show the game title, any disclaimers, and have a play button to start the game. Optionally
+the game might include a button to open a settings menu and change settings.
+
+The UI for the strategy phase will show the date, or the number of days remaining to launch or some indication to the player of how much time they have available 
+until the launch date. This will indicate to the player that time is advancing and approaching the launch date.  The UI might change slightly to show the urgency 
+of the approaching date as it gets closer to the launch date.  The UI might also show a brief summary of the crew selected along one of the sides, once the player 
+has chosen a crew. In constant view during the strategy phase will be the launch site, and possibly a silhouette of the rockets and spacecraft or some indication 
+of what the player has chosen so far as well as progress on that component being built and installed (might simply be a progress bar next to the component).
+
+During the flight mission phase the UI will constantly keep the spacecraft centered in the screen. During this phase we will show a new date with countdown, this time indicating how 
+far the spacecraft is from reaching the Psyche asteroid. Optionally we may have a minimap in the bottom left or bottom right corner to indicate overall scope of where the spacecraft is
+relative to the Psyche asteroid.  We may show a health bar somewhere to indicate the spacecraft health if we decide to have such an element in the game. 
+
+
+Game Mechanics:
+For the strategy phase the game input will be mostly (or entirely) point and click selections. The main element of the strategy phase is for the player to make good choices
+with limited resources (namely time but possibly others).  The idea is that if a player makes optimal choices in this phase that the flight phase will be slightly
+easier. The controls for this phase have not yet been determined it may involve point and click aspects or it may use arrow keys and some others. The expectation here is that 
+the player will be expected to respond to events in a timely matter to have the best outcome.
+
+
+Assets:
+We will be using simple 2D models, most likely sprites. We will leverage some sound effects during the strategy and flight phase where appropriate. Optionally we 
+may have some soft music that plays in the background to enhance the players experience. 
