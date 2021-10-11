@@ -1,4 +1,9 @@
-﻿using System.Collections.Generic;
+﻿/*
+Adrian Smith
+SER401
+*/
+
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
