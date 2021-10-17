@@ -1,6 +1,7 @@
 Adrian Smith
 SER401
 
+created game over courses of sprint 2
 
 
 # Snake (2D)
