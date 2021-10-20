@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
-    
+    public string nextScene;
     
     // Start is called before the first frame update
     public void OnButtonPress()
     {
-        SceneManager.LoadScene("Test_Next");
+        SceneManager.LoadScene(nextScene);
     }
 
     
