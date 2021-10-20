@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿/*
+Adrian Smith
+SER401
+*/
+
+using UnityEngine;
 
 public class Food : MonoBehaviour
 {
