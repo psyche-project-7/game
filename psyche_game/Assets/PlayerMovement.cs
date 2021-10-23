@@ -19,7 +19,11 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         //move our character
+        
+
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, false);
+
+        
 
     }
 }
