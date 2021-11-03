@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PsycheAsteroidHandler : MonoBehaviour
 {
-    public float MovementSpeed = 1;
+    public float MovementSpeed = 10;
 
     void Start()
     {
