@@ -8,7 +8,7 @@ public class dragDrop : MonoBehaviour
     private Camera _cam;
 
     public GameObject[] snapPoints;
-    private float snapSensitivity = 0.8f;
+    private float snapSensitivity = 0.5f;
     private void Awake()
     {
         _cam = Camera.main;
@@ -21,6 +21,13 @@ public class dragDrop : MonoBehaviour
     private void OnMouseDrag()
     {
         transform.position = getMousePos() + _dragOffset;
+        for (int i = 0; i < snapPoints.Length; i++)
+        {
+            if (Vector3.Distance(snapPoints[i].transform.position, transform.position) < snapSensitivity)
+            {
+                transform.position = new Vector3(snapPoints[i].transform.position.x, snapPoints[i].transform.position.y, snapPoints[i].transform.position.z - 0.1f);
+            }
+        }
     }
 
     private void OnMouseUp()
