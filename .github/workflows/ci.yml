@@ -101,7 +101,7 @@ jobs:
           name: build-WebGL
           path: build/WebGL
           
-    deployPages:
+  deployPages:
     needs: buildWebGL
     name: Deploy to Github Pages
     runs-on: ubuntu-latest
