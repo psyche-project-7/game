@@ -8,7 +8,7 @@ public class dragDrop : MonoBehaviour
     private Camera _cam;
 
     public GameObject[] snapPoints;
-    private float snapSensitivity = 0.5f;
+    private float snapSensitivity = .75f;
     private Vector3 initialPosition;
     private void Awake()
     {
