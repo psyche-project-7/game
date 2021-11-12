@@ -7,11 +7,7 @@ public class takeOff : MonoBehaviour
     public ParticleSystem smoke;
     public ParticleSystem combustion;
     private bool pressed = false;
-    private CameraShake cameraShake;
-    void Start()
-    {
-        cameraShake = GetComponent<CameraShake>();
-    }
+
 
     void Update()
     {
@@ -24,7 +20,7 @@ public class takeOff : MonoBehaviour
         {
             smoke.Play();
             combustion.Play();
-            cameraShake.Shake(0.25f, 4f);
+            CameraShake.instance.Shake(0.25f, 4f);
         } else
         {
             smoke.Stop();
