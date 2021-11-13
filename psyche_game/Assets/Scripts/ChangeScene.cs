@@ -7,7 +7,7 @@ public class SceneChanger : MonoBehaviour
 {
 	public void ChangeScene(string sceneName)
 	{
-		SceneManager.LoadScene (name);
+		SceneManager.LoadScene (Strategy_scene);
 	}
 	public void Exit()
 	{
