@@ -20,7 +20,6 @@ public class takeOff : MonoBehaviour
         {
             smoke.Play();
             combustion.Play();
-            CameraShake.instance.Shake(0.25f, 4f);
         } else
         {
             smoke.Stop();

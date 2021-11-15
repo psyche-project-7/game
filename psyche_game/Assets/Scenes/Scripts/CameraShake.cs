@@ -5,30 +5,32 @@ using UnityEngine;
 public class CameraShake : MonoBehaviour
 {
 
-    public static CameraShake instance;
+    public float shakeTime, shakeIntensity;
 
-    void Awake()
+    void Update()
     {
-        instance = this;
-    }
-
-    public IEnumerator Shake(float duration, float amount)
-    {
-        Vector3 originalPos = new Vector3(0, 0, 0);
-        float elapsedTime = 0f;
-
-        while (elapsedTime < duration)
+        if (Input.GetKeyDown("space"))
         {
-            float xOffset = Random.Range(-.5f, .5f) * amount;
-            float yOffset = Random.Range(-.5f, .5f) * amount;
-            transform.localPosition = new Vector3(xOffset, yOffset, 0);
-
-            elapsedTime += Time.deltaTime;
-
-            yield return null;
+            startShake(.1f, .1f);
         }
-        transform.localPosition = originalPos;
     }
 
+    private void LateUpdate()
+    {
+        if(shakeTime > 0)
+        {
+            shakeTime -= Time.deltaTime;
 
+            float xOffset = Random.Range(-.1f, .1f) * shakeIntensity;
+            float yOffset = Random.Range(-.1f, .1f) * shakeIntensity;
+
+            transform.position += new Vector3(xOffset, yOffset, 0f);
+        }
+    }
+
+    public void startShake(float shakeTimeDesired, float intensity)
+    {
+        shakeTime = shakeTimeDesired;
+        shakeIntensity = intensity;
+    }
 }
