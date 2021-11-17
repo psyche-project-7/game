@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class takeOff : MonoBehaviour
 {
-    public ParticleSystem smoke;
+
     public ParticleSystem combustion;
     private bool pressed = false;
 
@@ -18,13 +18,14 @@ public class takeOff : MonoBehaviour
         }
         if (pressed)
         {
-            smoke.Play();
             combustion.Play();
         } else
         {
-            smoke.Stop();
             combustion.Stop();
         }
+
+
+
 
 
     }
