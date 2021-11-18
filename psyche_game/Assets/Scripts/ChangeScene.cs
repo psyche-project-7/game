@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-UnityEngine.SceneManagement
+using UnityEngine.SceneManagement;
 
-public class ChangeScene : MonoBehaviour
+public class SceneChanger : MonoBehaviour
 {
-    public string SceneName;
-
-    // Update is called once per frame
-    public void ChangeToScene()
-    {
-        SceneManager.LoadScene(SceneName);
-    }
+	public void ChangeScene(string sceneName)
+	{
+		SceneManager.LoadScene (name);
+	}
+	public void Exit()
+	{
+		Application.Quit ();
+	}
 }
