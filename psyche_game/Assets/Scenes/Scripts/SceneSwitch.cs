@@ -6,11 +6,25 @@ using UnityEngine.SceneManagement;
 public class SceneSwitch : MonoBehaviour
 {
     public string nextScene;
+    private bool pressed = false;
 
-    //save things you want carried to the next scene in this as static variables
+    //save things you want carried to the next scene here as static variables
 
-    // Start is called before the first frame update
-    public void OnButtonPress()
+    void Update()
+    {
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            pressed = !pressed;
+
+        }
+        if (pressed)
+        {
+            Invoke("switchScene", 2);
+        }
+
+    }
+    void switchScene()
     {
         SceneManager.LoadScene(nextScene);
     }

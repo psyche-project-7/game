@@ -1222,5 +1222,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneChanger
       objectReference: {fileID: 0}
+    - target: {fileID: 8375150908042967765, guid: 9d0f96df1bf160f4db2dba3bbc502115, type: 3}
+      propertyPath: nextScene
+      value: GameScene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d0f96df1bf160f4db2dba3bbc502115, type: 3}
