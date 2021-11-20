@@ -47,34 +47,42 @@ using UnityEngine;
 
 
 
-publc interface IImproveSpaceShipStat<T>
-{
-    void Improve(T stat);
-}
-
-
-publc interface IImpairSpaceShipStat<T>
-{
-    void Impair(T stat);
-}
 
 
 
-public interface IReduceTime
-{
-    public void ReduceTime(int timeAmount);
-}
 
-
-
-public class SimpleInstrument : IImpairSpaceShipStat<float>, IReduceTime
-{
-
-}
-
-public class AdvancedInstrument : IImproveSpaceShipStat<float>, IReduceTime
+public class RocketParts : MonoBehaviour
 {
 
 }
 
 
+//publc interface IImproveSpaceShipStat<T>
+//{
+//    void Improve(T stat);
+//}
+
+
+//publc interface IImpairSpaceShipStat<T>
+//{
+//    void Impair(T stat);
+//}
+
+
+
+//public interface IReduceTime
+//{
+//    public void ReduceTime(int timeAmount);
+//}
+
+
+
+//public class SimpleInstrument : IImpairSpaceShipStat<float>, IReduceTime
+//{
+
+//}
+
+//public class AdvancedInstrument : IImproveSpaceShipStat<float>, IReduceTime
+//{
+
+//}
