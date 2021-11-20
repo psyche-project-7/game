@@ -40,20 +40,41 @@ using UnityEngine;
  * Simple Tail Section: Worse control during launch phase results in slightly off trajectory path from the start and lower starting velocity
  * 
  * 
+ * 
+ * I added an example set of interfaces and classes below for the instrument section on how we might accomplish the design.
+ * 
  */
 
 
-public class NewBehaviourScript : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+publc interface IImproveSpaceShipStat<T>
+{
+    void Improve(T stat);
 }
+
+
+publc interface IImpairSpaceShipStat<T>
+{
+    void Impair(T stat);
+}
+
+
+
+public interface IReduceTime
+{
+    public void ReduceTime(int timeAmount);
+}
+
+
+
+public class SimpleInstrument : IImpairSpaceShipStat<float>, IReduceTime
+{
+
+}
+
+public class AdvancedInstrument : IImproveSpaceShipStat<float>, IReduceTime
+{
+
+}
+
+
