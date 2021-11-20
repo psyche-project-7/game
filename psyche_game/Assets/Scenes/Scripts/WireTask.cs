@@ -5,9 +5,7 @@ using UnityEngine;
 public class WireTask : MonoBehaviour
 {
     public List<Color> _wireColors = new List<Color>();
-
     public List<Wire> _leftWires = new List<Wire>();
-
     public List<Wire> _rightWires = new List<Wire>();
 
     private List<Color> _availableColors;
