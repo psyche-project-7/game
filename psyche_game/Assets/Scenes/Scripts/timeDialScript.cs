@@ -36,7 +36,7 @@ public class timeDialScript : MonoBehaviour
         {
             currentTime += 25f * Time.deltaTime;
         }
-        else
+        else if (Input.GetKey(KeyCode.DownArrow))
         {
             currentTime -= 25f * Time.deltaTime;
         }
