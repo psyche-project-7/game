@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class shipTakeoffMove : MonoBehaviour
 {
-    public GameObject spaceShip;
     private Vector3 initialPosition;
     private bool pressed = false;
 
