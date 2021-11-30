@@ -11,8 +11,8 @@ public class timeDialScript : MonoBehaviour
 
     private Transform needleTranform;
 
-    private float timeMax;
-    private float currentTime;
+    public float timeMax;
+    public float currentTime;
 
     private void Awake()
     {
