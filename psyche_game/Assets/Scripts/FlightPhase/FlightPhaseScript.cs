@@ -4,7 +4,7 @@ using System.Collections;
     [RequireComponent(typeof(LineRenderer))]
 public class FlightPhaseScript : MonoBehaviour
 {
-    public int vertexCount = 40;
+    public int vertexCount = 150;
     public float lineWidth = 0.2f;
     public float radius;
 
@@ -20,18 +20,18 @@ public class FlightPhaseScript : MonoBehaviour
     {
         renderer.widthMultiplier = lineWidth;
         float deltaTheta = (2f * Mathf.PI) / vertexCount;
-        float theta = 0f;
-        renderer.positionCount = vertexCount;
-        float counter = 0f;
+        float theta = 0f;        
+        renderer.positionCount = vertexCount;        
+        var points = new Vector3[vertexCount + 1];
         for (int i = 0; i < vertexCount + 1; i++)
         {
+            radius = i*5;             
+            points[i] = new Vector3((radius/vertexCount) * Mathf.Cos(theta*3), (radius/vertexCount) * Mathf.Sin(theta*3), 0f);
             
-            float r = theta * counter;
-            Vector3 pos = new Vector3((r/400) * Mathf.Cos(theta), (r/400) * Mathf.Sin(theta), 0f);
-            renderer.SetPosition(i, pos);
             theta += deltaTheta;
-            counter++;
+            Debug.Log("This is Theta: " + deltaTheta.ToString());
         }
+        renderer.SetPositions(points);
     }
 #if UNITY_EDITOR
     private void OnDrawGizmos()

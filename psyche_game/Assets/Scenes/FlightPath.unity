@@ -236,9 +236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 153883a347b81934989d882ba5cac2be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vertexCount: 150
+  vertexCount: 100
   lineWidth: 0.02
-  radius: 2
+  radius: 0
 --- !u!120 &1531846951
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -258,7 +258,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: fb955b82d11776b40a658d1e5cc1de1c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -279,9 +279,7 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  m_Positions: []
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -289,7 +287,7 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
+        time: 0.043022156
         value: 1
         inSlope: 0
         outSlope: 0
@@ -332,7 +330,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     shadowBias: 0.5
     generateLightingData: 0
   m_UseWorldSpace: 1
