@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class shipTakeoffMove : MonoBehaviour
 {
-    public GameObject spaceShip;
     private Vector3 initialPosition;
     private bool pressed = false;
 
@@ -43,3 +42,4 @@ public class shipTakeoffMove : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }
 }
+
