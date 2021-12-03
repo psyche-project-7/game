@@ -29,5 +29,10 @@ public class SceneSwitch : MonoBehaviour
         SceneManager.LoadScene(nextScene);
     }
 
+    public void playAltScene(string altScene)
+    {
+        SceneManager.LoadScene(altScene);
+    }
+
 
 }
