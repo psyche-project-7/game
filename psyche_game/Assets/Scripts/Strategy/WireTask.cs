@@ -11,6 +11,9 @@ public class WireTask : MonoBehaviour
     private List<Color> _availableColors;
     private List<int> _availableLeftWireIndex;
     private List<int> _availableRightWireIndex;
+    public Wire CurrentDraggedwire;
+    public Wire CurrentHoveredWire;
+    public bool gameComplete = false;
 
     private void Start()
     {
@@ -40,6 +43,14 @@ public class WireTask : MonoBehaviour
             _availableColors.Remove(pickedColor);
             _availableLeftWireIndex.RemoveAt(pickedLeftWireIndex);
             _availableRightWireIndex.RemoveAt(pickedRightWireIndex);
+        }
+    }
+
+    private void Update()
+    {
+        if (gameComplete)
+        {
+            print("Wire game complete!");
         }
     }
 
