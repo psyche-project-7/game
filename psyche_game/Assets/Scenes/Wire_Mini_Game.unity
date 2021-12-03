@@ -159,8 +159,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -253, y: -19}
-  m_SizeDelta: {x: 100, y: 27.3688}
+  m_AnchoredPosition: {x: -238.2, y: -51.4}
+  m_SizeDelta: {x: 75, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &21951978
 MonoBehaviour:
@@ -260,7 +260,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 15.121563
+    widthMultiplier: 10.390865
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -349,8 +349,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: -13.985}
-  m_SizeDelta: {x: 100, y: 27.9695}
+  m_AnchoredPosition: {x: 236.8, y: -51.4}
+  m_SizeDelta: {x: 75, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &39689647
 MonoBehaviour:
@@ -539,8 +539,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: 200.28528}
-  m_SizeDelta: {x: 100, y: 27.9695}
+  m_AnchoredPosition: {x: 236.79999, y: 148.88998}
+  m_SizeDelta: {x: 75, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &154788390
 MonoBehaviour:
@@ -729,8 +729,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: 76.6297}
-  m_SizeDelta: {x: 100, y: 27.9697}
+  m_AnchoredPosition: {x: 236.79999, y: 48.299995}
+  m_SizeDelta: {x: 75, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &251843178
 MonoBehaviour:
@@ -941,10 +941,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wireColors:
-  - {r: 0.6792453, g: 0, b: 0, a: 1}
-  - {r: 1, g: 0.8739451, b: 0.18396229, a: 1}
-  - {r: 0, g: 0.8113208, b: 0.048844393, a: 1}
-  - {r: 0, g: 0.1812067, b: 1, a: 1}
+  - {r: 0.38679248, g: 0.023718417, b: 0.023718417, a: 1}
+  - {r: 0.6698113, g: 0.5691938, b: 0.015797434, a: 1}
+  - {r: 0.040094346, g: 0.5, b: 0.06675553, a: 1}
+  - {r: 0.0513973, g: 0.10168911, b: 0.3301887, a: 1}
   _leftWires:
   - {fileID: 1777063285}
   - {fileID: 1142365941}
@@ -994,8 +994,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -253, y: 104.3}
-  m_SizeDelta: {x: 100, y: 27.3688}
+  m_AnchoredPosition: {x: -238.2, y: 48.299995}
+  m_SizeDelta: {x: 75, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &490800379
 MonoBehaviour:
@@ -1095,7 +1095,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 15.043546
+    widthMultiplier: 10.17397
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1250,8 +1250,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -253, y: 205}
-  m_SizeDelta: {x: 100, y: 27.3688}
+  m_AnchoredPosition: {x: -238.20001, y: 148.88998}
+  m_SizeDelta: {x: 75, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142365941
 MonoBehaviour:
@@ -1351,7 +1351,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 15.293244
+    widthMultiplier: 10.279117
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1554,14 +1554,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3018868, g: 0.0042719753, b: 0.0042719753, a: 0.9019608}
+  m_Color: {r: 0.03404237, g: 0.3671731, b: 0.4245283, a: 0.9019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ac39435c7ed6e79488d9912792ce11d4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1615,8 +1615,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260, y: -121.3}
-  m_SizeDelta: {x: 100, y: 27.3688}
+  m_AnchoredPosition: {x: -238.2, y: -152.70001}
+  m_SizeDelta: {x: 75, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1777063285
 MonoBehaviour:
@@ -1716,7 +1716,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 15.493745
+    widthMultiplier: 10.442442
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1822,7 +1822,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 761.08813
+  orthographic size: 400
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1888,8 +1888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: -121}
-  m_SizeDelta: {x: 100, y: 27.9695}
+  m_AnchoredPosition: {x: 236.8, y: -152.70001}
+  m_SizeDelta: {x: 75, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1900318533
 MonoBehaviour:

@@ -50,7 +50,7 @@ public class WireTask : MonoBehaviour
     {
         if (gameComplete)
         {
-            print("Wire game complete!");
+            ;
         }
     }
 
