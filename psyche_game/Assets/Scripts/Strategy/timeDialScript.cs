@@ -12,36 +12,42 @@ public class timeDialScript : MonoBehaviour
     private Transform needleTranform;
 
     public float timeMax;
-    public float currentTime;
+    public static float currentTime;
+
+
 
     private void Awake()
     {
         needleTranform = transform.Find("needle");
 
-        currentTime = 0f;
+        currentTime = 120f;
         timeMax = 120f; //arbitrarily selected
 
     }
 
+    void OnEnable()
+    {
+        dragDrop.OnPartChanged += UpdateNeedleOnPartChangedEvent;
+    }
+
+    void OnDisable()
+    {
+        dragDrop.OnPartChanged -= UpdateNeedleOnPartChangedEvent;
+    }
+
     private void Update()
     {
-        HandleInput();
-
         needleTranform.eulerAngles = new Vector3(0, 0, TranslateTimeUnitsToRotation());
     }
 
-    private void HandleInput()
+    private void UpdateNeedleOnPartChangedEvent(int amount)
     {
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            currentTime += 25f * Time.deltaTime;
-        }
-        else if (Input.GetKey(KeyCode.DownArrow))
-        {
-            currentTime -= 25f * Time.deltaTime;
-        }
-
+        currentTime += amount;
         currentTime = Mathf.Clamp(currentTime, 0f, timeMax);
+        if (currentTime == 0f)
+        {     
+            Debug.Log("All Time Used!");
+        }
     }
 
 
@@ -53,4 +59,5 @@ public class timeDialScript : MonoBehaviour
 
         return ZERO_TIME_ANGLE - timeNormalized * totalAngleSize;
     }
+
 }
