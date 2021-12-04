@@ -7,6 +7,7 @@ public class dragDrop : MonoBehaviour
     private Vector3 _dragOffset;
     private Camera _cam;
 
+    public int timeCost;
     public GameObject[] snapPoints;
     private float snapSensitivity = .75f;
     private Vector3 initialPosition;

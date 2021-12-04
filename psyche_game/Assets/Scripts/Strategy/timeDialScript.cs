@@ -18,7 +18,7 @@ public class timeDialScript : MonoBehaviour
     {
         needleTranform = transform.Find("needle");
 
-        currentTime = 0f;
+        currentTime = 120f;
         timeMax = 120f; //arbitrarily selected
 
     }
