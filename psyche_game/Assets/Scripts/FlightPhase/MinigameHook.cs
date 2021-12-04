@@ -12,7 +12,7 @@ public class MinigameHook : MonoBehaviour
             //var moveScript = FindObjectByType<FlightPhaseScript>();
             //moveScript.setHookPos();
             var script = FindObjectOfType<SceneSwitch>();
-            script.playAltScene(nextScene);
+            //script.playAltScene(nextScene);
       
     }
 }

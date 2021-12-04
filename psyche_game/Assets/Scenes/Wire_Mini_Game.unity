@@ -958,6 +958,7 @@ MonoBehaviour:
   CurrentDraggedwire: {fileID: 0}
   CurrentHoveredWire: {fileID: 0}
   gameComplete: 0
+  nextScene: FlightPath
 --- !u!1 &490800377
 GameObject:
   m_ObjectHideFlags: 0
