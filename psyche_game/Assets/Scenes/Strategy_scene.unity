@@ -169,7 +169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeMax: 0
-  currentTime: 0
 --- !u!1 &541458655
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,6 +279,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c4a0427df84e834a954e1e1a5c5a298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rocketPart1: {fileID: 0}
+  rocketPart2: {fileID: 0}
+  rocketPart3: {fileID: 0}
   target: {fileID: 541458658}
   smoothTime: 1
 --- !u!1 &632485746
