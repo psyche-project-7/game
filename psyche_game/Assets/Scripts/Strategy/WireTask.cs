@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WireTask : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class WireTask : MonoBehaviour
     public Wire CurrentDraggedwire;
     public Wire CurrentHoveredWire;
     public bool gameComplete = false;
+    public string nextScene;
 
     private void Start()
     {
@@ -50,8 +52,13 @@ public class WireTask : MonoBehaviour
     {
         if (gameComplete)
         {
-            ;
+            Invoke("switchScene", 2);
         }
+    }
+
+    private void switchScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 
 }
