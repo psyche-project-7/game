@@ -34,12 +34,12 @@ public class dragDrop : MonoBehaviour
 
     void OnEnable()
     {
-        shipTakeoffMove.OnRocketIsLaunching += beginRocketLaunchSequence;
+        LaunchButton.OnRocketLaunchRequest += beginRocketLaunchSequence;
     }
 
     void OnDisable()
     {
-        shipTakeoffMove.OnRocketIsLaunching -= beginRocketLaunchSequence;
+        LaunchButton.OnRocketLaunchRequest -= beginRocketLaunchSequence;
     }
 
     private void Update()
@@ -131,9 +131,6 @@ public class dragDrop : MonoBehaviour
             
         }
     }
-
-
-
 
     bool partWouldExceedAlottedTime(int timeCost)
     {

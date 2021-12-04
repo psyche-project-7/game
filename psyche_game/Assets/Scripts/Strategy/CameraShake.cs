@@ -31,13 +31,14 @@ public class CameraShake : MonoBehaviour
 
     void OnEnable()
     {
-        shipTakeoffMove.OnRocketIsLaunching += beginRocketLaunchSequence;
+        LaunchButton.OnRocketLaunchRequest += beginRocketLaunchSequence;
     }
 
-    void OnDisable() 
+    void OnDisable()
     {
-        shipTakeoffMove.OnRocketIsLaunching -= beginRocketLaunchSequence;
+        LaunchButton.OnRocketLaunchRequest -= beginRocketLaunchSequence;
     }
+
 
     public void beginRocketLaunchSequence()
     {

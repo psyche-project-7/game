@@ -46,7 +46,7 @@ public class timeDialScript : MonoBehaviour
         currentTime = Mathf.Clamp(currentTime, 0f, timeMax);
         if (currentTime == 0f)
         {     
-            Debug.Log("AllTimeUsed!");
+            Debug.Log("All Time Used!");
         }
     }
 
@@ -59,4 +59,5 @@ public class timeDialScript : MonoBehaviour
 
         return ZERO_TIME_ANGLE - timeNormalized * totalAngleSize;
     }
+
 }
