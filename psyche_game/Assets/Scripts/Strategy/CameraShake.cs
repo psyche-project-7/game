@@ -6,7 +6,8 @@ public class CameraShake : MonoBehaviour
 {
 
     private float shakeIntensity = 0.5f;
-    private bool keyPressed = false;
+
+    private bool rocketIsLaunching = false;
     private bool diminishShake = false;
     private float xBounds = 0.15f;
     private float yBounds = 0.15f;
@@ -28,27 +29,31 @@ public class CameraShake : MonoBehaviour
         boundedyAbsMin = initialPosition.y - yBounds;
     }
 
-    void Update()
+    void OnEnable()
     {
+        LaunchButton.OnRocketLaunchRequest += beginRocketLaunchSequence;
+    }
 
-        //just here as a placeholder, we'll actually remove this code and create an event that triggers the shake
-        if (Input.GetKeyDown("space")) 
-        {
-            keyPressed = !keyPressed;
+    void OnDisable()
+    {
+        LaunchButton.OnRocketLaunchRequest -= beginRocketLaunchSequence;
+    }
 
-        }
-        //just here as a placeholder, we'll actually remove this code and create an event that triggers the shake reduction
-        if (Input.GetKeyDown("j"))
-        {
-            diminishShake = !diminishShake;
 
-        }
+    public void beginRocketLaunchSequence()
+    {
+        rocketIsLaunching = true;
+        Invoke("beginScreenShakeDiminish", 1.5f);
+    }
 
+    public void beginScreenShakeDiminish()
+    {
+        diminishShake = true;
     }
 
     public void LateUpdate()
     {
-        if (keyPressed)
+        if (rocketIsLaunching)
         {
             shakeScreen(shakeIntensity);
 
@@ -59,7 +64,6 @@ public class CameraShake : MonoBehaviour
         }
 
     }
-
 
     public void shakeScreen(float shakeIntensity)
     {

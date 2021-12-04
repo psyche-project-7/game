@@ -5,12 +5,11 @@ using UnityEngine;
 public class shipTakeoffMove : MonoBehaviour
 {
     private Vector3 initialPosition;
-    private bool pressed = false;
-
 
     public Transform target;
     public float smoothTime = 0.3F;
     private Vector3 velocity = Vector3.zero;
+    private bool launch = false;
 
 
     Vector3 targetPosition;
@@ -18,28 +17,47 @@ public class shipTakeoffMove : MonoBehaviour
     void Start()
     {
         initialPosition = transform.position;
-        targetPosition = target.TransformPoint(new Vector3(0f, 20.0f, 0f));
+        targetPosition = target.TransformPoint(new Vector3(0f, 30.0f, 0f));
     }
 
+    void OnEnable()
+    {
+        LaunchButton.OnRocketLaunchRequest += handleLaunchRequest;
+    }
+
+    void OnDisable()
+    {
+        LaunchButton.OnRocketLaunchRequest -= handleLaunchRequest;
+    }
 
     void Update()
     {
+        flyUp();
+    }
 
-        if (Input.GetKeyDown("space"))
-        {
-            pressed = !pressed;
+    public void handleLaunchRequest()
+    {
+        Invoke("enableFly", 2f);
+        Invoke("requestNextScene", 5f);
+    }
 
-        }
-        if (pressed)
-        {
-            Invoke("flyUp", 2);
-        }
-        
+    public void enableFly()
+    {
+        launch = true;
     }
 
     public void flyUp()
-    {        
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+    {
+        if (launch)
+        {
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        }
+
+    }
+
+    public void requestNextScene()
+    {
+        SceneSwitch.playAltScene("FlightPath");
     }
 }
 

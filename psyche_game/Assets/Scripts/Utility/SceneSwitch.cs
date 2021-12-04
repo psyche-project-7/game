@@ -10,6 +10,7 @@ public class SceneSwitch : MonoBehaviour
 
     //save things you want carried to the next scene here as static variables
 
+
     void Update()
     {
 
@@ -29,7 +30,8 @@ public class SceneSwitch : MonoBehaviour
         SceneManager.LoadScene(nextScene);
     }
 
-    public void playAltScene(string altScene)
+
+    public static void playAltScene(string altScene)
     {
         SceneManager.LoadScene(altScene);
     }
