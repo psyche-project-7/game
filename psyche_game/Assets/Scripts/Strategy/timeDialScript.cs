@@ -14,8 +14,7 @@ public class timeDialScript : MonoBehaviour
     public float timeMax;
     public static float currentTime;
 
-    public delegate void AllTimeUsed();
-    public static event AllTimeUsed OnAllTimeUsed;
+
 
     private void Awake()
     {
@@ -46,12 +45,7 @@ public class timeDialScript : MonoBehaviour
         currentTime += amount;
         currentTime = Mathf.Clamp(currentTime, 0f, timeMax);
         if (currentTime == 0f)
-        {
-            if (OnAllTimeUsed != null)
-            {
-                OnAllTimeUsed();
-            }
-            
+        {     
             Debug.Log("AllTimeUsed!");
         }
     }
