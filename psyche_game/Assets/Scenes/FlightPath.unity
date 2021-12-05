@@ -219,9 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df324b61943e464b9792964a1d78c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 
   miniGame1: Wire_Mini_Game
-  miniGame2: 
+  miniGame2: JeremyMinigame
   endScene: Credits Scene
 --- !u!1 &435937979
 GameObject:
