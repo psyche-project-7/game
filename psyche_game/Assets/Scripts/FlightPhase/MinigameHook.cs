@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MinigameHook : MonoBehaviour
-{ 
+{
+    public static Collider2D smack;
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(smack collision)
     {            
         string nextScene = collision.gameObject.name;
             Destroy(collision.gameObject);
