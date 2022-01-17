@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class MinigameHook : MonoBehaviour
 {
-    public static Collider2D smack;
-
-    void OnTriggerEnter2D(smack collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {            
         string nextScene = collision.gameObject.name;
             Destroy(collision.gameObject);
+            // add static int array to scenechanger and destroy colliders/start pathing based on location
             //var moveScript = FindObjectByType<FlightPhaseScript>();
             //moveScript.setHookPos();
             var script = FindObjectOfType<SceneSwitch>();
