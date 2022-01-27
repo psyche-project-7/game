@@ -6,27 +6,21 @@ public class takeOff : MonoBehaviour
 {
 
     public ParticleSystem combustion;
-    private bool pressed = false;
 
 
-    void Update()
+    void OnEnable()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            pressed = !pressed;
-
-        }
-        if (pressed)
-        {
-            combustion.Play();
-        } else
-        {
-            combustion.Stop();
-        }
-
-
-
-
-
+        LaunchButton.OnRocketLaunchRequest += beginRocketLaunchSequence;
     }
+
+    void OnDisable()
+    {
+        LaunchButton.OnRocketLaunchRequest -= beginRocketLaunchSequence;
+    }
+
+    public void beginRocketLaunchSequence()
+    {
+        combustion.Play();
+    }
+
 }
