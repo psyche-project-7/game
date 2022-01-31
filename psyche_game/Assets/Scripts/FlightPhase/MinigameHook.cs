@@ -5,6 +5,7 @@ using UnityEngine;
 public class MinigameHook : MonoBehaviour
 {
     public int miniGameNumber = 1;
+    public GameObject collider;
     
     void OnTriggerEnter2D(Collider2D collision)
     {            
@@ -20,7 +21,7 @@ public class MinigameHook : MonoBehaviour
         } else
         {
             script.addMiniGame(miniGameNumber);
-            script.playAltScene(nextScene);
+            //script.playAltScene(nextScene);
         }
 
       
