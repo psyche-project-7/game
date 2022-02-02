@@ -21,7 +21,7 @@ public class MinigameHook : MonoBehaviour
         } else
         {
             script.addMiniGame(miniGameNumber);
-            //script.playAltScene(nextScene);
+            SceneSwitch.playAltScene(nextScene);
         }
 
       
