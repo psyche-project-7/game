@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WireTask : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class WireTask : MonoBehaviour
     public Wire CurrentHoveredWire;
     public bool gameComplete = false;
     public string nextScene;
+    public Text success;
 
     private void Start()
     {
@@ -52,6 +54,7 @@ public class WireTask : MonoBehaviour
     {
         if (gameComplete)
         {
+            success.text = "Success!";
             Invoke("switchScene", 2);
         }
     }
