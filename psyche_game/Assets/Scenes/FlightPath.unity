@@ -790,7 +790,7 @@ GameObject:
   - component: {fileID: 1892706264}
   - component: {fileID: 1892706263}
   m_Layer: 0
-  m_Name: EndScreen
+  m_Name: Credits Scene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -822,7 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32b8b2411a96c74dbdffd202dc474bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: EndScreen
+  nextScene: Credits Scene
 --- !u!50 &1892706265
 Rigidbody2D:
   serializedVersion: 4
