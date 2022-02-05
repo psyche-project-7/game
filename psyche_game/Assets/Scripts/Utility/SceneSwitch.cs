@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class SceneSwitch : MonoBehaviour
 {
     public string nextScene;
-    private bool pressed = false;
-
     //save things you want carried to the next scene here as static variables
+    private bool pressed = false;
+    static int[] minigamesPlayed = {0, 0, 0, 0};
+
+    
 
 
     void Update()
@@ -36,5 +38,20 @@ public class SceneSwitch : MonoBehaviour
         SceneManager.LoadScene(altScene);
     }
 
+    public void addMiniGame(int num)
+    {
+        minigamesPlayed[num - 1] = 1;
+    }
+
+    public bool checkPlayed(int num)
+    {
+        if (minigamesPlayed[num-1] == 0)
+        {
+            return false;
+        } else
+        {
+            return true;
+        }
+    }
 
 }
