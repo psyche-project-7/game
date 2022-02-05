@@ -961,6 +961,8 @@ MonoBehaviour:
   gameComplete: 0
   nextScene: FlightPath
   success: {fileID: 1473084145}
+  helpTime: 10
+  helpStartTime: 0
 --- !u!1 &490800377
 GameObject:
   m_ObjectHideFlags: 0

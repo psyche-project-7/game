@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class WireTask : MonoBehaviour
 {
@@ -18,9 +19,12 @@ public class WireTask : MonoBehaviour
     public bool gameComplete = false;
     public string nextScene;
     public Text success;
+    public int helpTime = 5;
+    public float helpStartTime;
 
     private void Start()
     {
+        helpStartTime = Time.time;
         _availableColors = new List<Color>(_wireColors);
         _availableLeftWireIndex = new List<int>();
         _availableRightWireIndex = new List<int>();
@@ -52,10 +56,16 @@ public class WireTask : MonoBehaviour
 
     private void Update()
     {
+
         if (gameComplete)
         {
             success.text = "Success!";
             Invoke("switchScene", 2);
+        }
+        if ((Time.time - helpStartTime) > helpTime)
+        {
+            EditorUtility.DisplayDialog("Are you stuck?", "Drag the left color to it's matching color on the right.", "OK");
+            helpStartTime = Time.time;
         }
     }
 
