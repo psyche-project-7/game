@@ -585,7 +585,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 117050587}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1435387381}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: DisplayNextSentence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &117050587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,12 +1565,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - 'Hi there astronaught.
-
-      Were are finishing the last few touches of our
-      rocket and we need your help.'
-    - Please select three options on the left that can help our mission.
-    - Be careful. Your choices will influence how well the rocket flys.
+    - Connect the wires from the left to the right.
+    - Once all the wires have been connected you will continue on your flight to
+      Psyche.
     name: Psyche AI
 --- !u!114 &889504304
 MonoBehaviour:
@@ -1603,7 +1612,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 889504305}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 889504303}
+        m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &889504305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2106,6 +2127,7 @@ GameObject:
   - component: {fileID: 1369487857}
   - component: {fileID: 1369487859}
   - component: {fileID: 1369487858}
+  - component: {fileID: 1369487860}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -2132,7 +2154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 87}
+  m_AnchoredPosition: {x: 0, y: 121}
   m_SizeDelta: {x: 291.9781, y: 125.1971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1369487858
@@ -2173,6 +2195,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369487856}
   m_CullTransparentMesh: 1
+--- !u!95 &1369487860
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369487856}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 92a773dd8951c7049b89abe6d3c520f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1435387380
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,6 +2243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08218dffc1b68e0428b4950ef1c2911a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 920918557}
+  dialogueText: {fileID: 279779040}
+  animator: {fileID: 1369487860}
 --- !u!4 &1435387382
 Transform:
   m_ObjectHideFlags: 0
