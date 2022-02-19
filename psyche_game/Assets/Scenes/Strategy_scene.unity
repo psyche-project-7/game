@@ -497,7 +497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - Welcom Astronaut. We need your help completing our rocket.
+    - Welcome Astronaut. We need your help completing our rocket.
     - Please select three options on the left that can help our mission
     - Be careful the parts you pick will affect the mission difficulty.
     name: Psyche AI
@@ -687,7 +687,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &759323061
@@ -989,7 +989,7 @@ SpriteRenderer:
   m_Size: {x: 0.984375, y: 0.984375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1014901720
@@ -1098,7 +1098,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1069826203
@@ -1153,7 +1153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -524.85, y: -350.08}
+  m_AnchoredPosition: {x: -525.21, y: -367.98}
   m_SizeDelta: {x: 291.9781, y: 125.1971}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1297604311
@@ -1166,7 +1166,7 @@ Animator:
   m_GameObject: {fileID: 1297604309}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 92a773dd8951c7049b89abe6d3c520f7, type: 2}
+  m_Controller: {fileID: 9100000, guid: 334966691fe1d764394a91a78a016478, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

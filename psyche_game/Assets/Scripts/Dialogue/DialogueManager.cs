@@ -41,8 +41,19 @@ public class DialogueManager : MonoBehaviour
         else
         {
             string sentence = sentences.Dequeue();
-            dialogueText.text = sentence;
-            Debug.Log(sentence);
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(sentence));
+            //dialogueText.text = sentence;
+            
+        }
+    }
+    IEnumerator TypeSentence (string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(.05f);
         }
     }
 
