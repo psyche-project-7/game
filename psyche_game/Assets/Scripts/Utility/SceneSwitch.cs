@@ -12,7 +12,7 @@ public class SceneSwitch : MonoBehaviour
     static string[] selectedParts = {"", "", ""};
 
     
-    public void setPart(string part, string spriteName) {
+    public static void setPart(string part, string spriteName) {
         if (part.Equals("body")){
             selectedParts[0] = spriteName;
         } else if (part.Equals("booster")){

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class dragDrop : MonoBehaviour
 {
-    public GameObject sceneSwitchObject;
     public string partType;
     public Sprite theSprite;
 
@@ -112,8 +111,7 @@ public class dragDrop : MonoBehaviour
                 if (OnPartChanged != null)
                 {
                     OnPartChanged(timeCost);
-                    var setSprite = sceneSwitchObject.GetComponent<SceneSwitch>();
-                    setSprite.setPart(partType, theSprite.name);
+                    SceneSwitch.setPart(partType, theSprite.name);
                 }
             } else
             {
