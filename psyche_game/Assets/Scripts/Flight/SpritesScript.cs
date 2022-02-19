@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sprites : MonoBehaviour
+public class SpriteScript : MonoBehaviour
 {
     public Sprite[] sprites;
 

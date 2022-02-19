@@ -12,6 +12,7 @@ public class FlightPhaseScript : MonoBehaviour
     public GameObject boosterRight;
     public GameObject capsule;
     public GameObject sceneSwitch;
+    public GameObject sprites;
 
     private LineRenderer renderer;
     static float deltaTheta; 
@@ -25,7 +26,7 @@ public class FlightPhaseScript : MonoBehaviour
         var boosterRightRenderer = boosterRight.GetComponent<SpriteRenderer>();
         var capsuleRenderer = capsule.GetComponent<SpriteRenderer>();
         var spriteArraySelector = theObject.GetComponent<SceneSwitch>();
-        var spriteArray = theObject.GetComponent<Sprites>();
+        var spriteArray = sprites.GetComponent<SpriteScript>();
 
         theObjectRenderer.sprite = spriteArray.getSprite(spriteArraySelector.getBody());
         boosterLeftRenderer.sprite = spriteArray.getSprite(spriteArraySelector.getBooster());
