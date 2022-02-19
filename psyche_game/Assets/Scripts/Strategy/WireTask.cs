@@ -24,7 +24,7 @@ public class WireTask : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+        //FindObjectOfType<DialogueTrigger>().TriggerDialogue();
         helpStartTime = Time.time;
         _availableColors = new List<Color>(_wireColors);
         _availableLeftWireIndex = new List<int>();
