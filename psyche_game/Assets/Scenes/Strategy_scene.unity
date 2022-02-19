@@ -503,6 +503,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16993ad421925b748b2a070ad4048e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneSwitchObject: {fileID: 0}
+  partType: 
+  theSprite: {fileID: 0}
   timeCost: -60
   snapPoints:
   - {fileID: 1069826200}
@@ -6054,6 +6057,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16993ad421925b748b2a070ad4048e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneSwitchObject: {fileID: 0}
+  partType: 
+  theSprite: {fileID: 0}
   timeCost: -60
   snapPoints:
   - {fileID: 1014901717}
@@ -6257,6 +6263,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16993ad421925b748b2a070ad4048e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneSwitchObject: {fileID: 0}
+  partType: 
+  theSprite: {fileID: 0}
   timeCost: -60
   snapPoints:
   - {fileID: 759323057}
@@ -6273,7 +6282,7 @@ GameObject:
   - component: {fileID: 2007990003}
   - component: {fileID: 2007990002}
   m_Layer: 0
-  m_Name: YellowPart1
+  m_Name: CorrectBooster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6291,6 +6300,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16993ad421925b748b2a070ad4048e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneSwitchObject: {fileID: 1119743093}
+  partType: booster
+  theSprite: {fileID: 21300000, guid: 009362599e2fbb34fa7efbbb147a299f, type: 3}
   timeCost: -30
   snapPoints:
   - {fileID: 1014901717}
@@ -6311,7 +6323,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.8, y: 0.92}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -6360,8 +6372,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 929195d83d518f74e9fae3ac7dac5ac2, type: 3}
-  m_Color: {r: 0.6320754, g: 0.5575195, b: 0.0506853, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 009362599e2fbb34fa7efbbb147a299f, type: 3}
+  m_Color: {r: 0.9811321, g: 0.9780426, b: 0.9570666, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6378,13 +6390,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007990001}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.38, y: -2.3899999, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -5.61, y: -2.62, z: 0}
   m_LocalScale: {x: 1, y: 0.87485015, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &2022854131
 GameObject:
   m_ObjectHideFlags: 0
@@ -6398,7 +6410,7 @@ GameObject:
   - component: {fileID: 2022854133}
   - component: {fileID: 2022854132}
   m_Layer: 0
-  m_Name: RedPart1
+  m_Name: CorrectCapsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6416,6 +6428,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16993ad421925b748b2a070ad4048e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneSwitchObject: {fileID: 1119743093}
+  partType: capsule
+  theSprite: {fileID: 21300000, guid: 830ee1afe816b584199961305e3d51ad, type: 3}
   timeCost: -30
   snapPoints:
   - {fileID: 1069826200}
@@ -6472,8 +6487,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 929195d83d518f74e9fae3ac7dac5ac2, type: 3}
-  m_Color: {r: 0.48235294, g: 0.03529411, b: 0.06387055, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 830ee1afe816b584199961305e3d51ad, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6490,13 +6505,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022854131}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -4.41, y: 3.66, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5521, y: 1.5521, z: 1.5521}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &2066599265
 GameObject:
   m_ObjectHideFlags: 0
@@ -6619,7 +6634,7 @@ GameObject:
   - component: {fileID: 2087171987}
   - component: {fileID: 2087171986}
   m_Layer: 0
-  m_Name: GreenPart1
+  m_Name: CorrectBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6637,6 +6652,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16993ad421925b748b2a070ad4048e33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneSwitchObject: {fileID: 1119743093}
+  partType: body
+  theSprite: {fileID: 21300000, guid: c93a4ea53af6fdf4f969320eb572d08b, type: 3}
   timeCost: -30
   snapPoints:
   - {fileID: 759323057}
@@ -6693,8 +6711,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 929195d83d518f74e9fae3ac7dac5ac2, type: 3}
-  m_Color: {r: 0.061675705, g: 0.4811321, b: 0.03404236, a: 1}
+  m_Sprite: {fileID: 21300000, guid: c93a4ea53af6fdf4f969320eb572d08b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6711,10 +6729,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087171985}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.42, y: 0.6600003, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -7.02, y: 0.69, z: 0}
+  m_LocalScale: {x: 1.5549, y: 1.5549, z: 1.5549}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
