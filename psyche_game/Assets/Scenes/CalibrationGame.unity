@@ -348,6 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5be0b5a13c014b4787b127399fd83cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: FlightPath
 --- !u!1 &775106336
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +359,7 @@ GameObject:
   m_Component:
   - component: {fileID: 775106338}
   - component: {fileID: 775106337}
+  - component: {fileID: 775106339}
   m_Layer: 0
   m_Name: earth
   m_TagString: Untagged
@@ -430,6 +432,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &775106339
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775106336}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 39.07449
 --- !u!1 &1275596181
 GameObject:
   m_ObjectHideFlags: 0
