@@ -20,6 +20,9 @@ public class SceneSwitch : MonoBehaviour
         } else if (part.Equals("capsule")){
             selectedParts[2] = spriteName;
         }
+        foreach (string i in selectedParts) {
+        Debug.Log(i);
+        }
 
     }
 

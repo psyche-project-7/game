@@ -108,6 +108,7 @@ public class dragDrop : MonoBehaviour
                 transform.position = new Vector3(snapPoints[i].transform.position.x, snapPoints[i].transform.position.y, snapPoints[i].transform.position.z - 0.1f);
                 snapped = true;
                 totalSnapped += 1;
+                SceneSwitch.setPart(partType, theSprite.name);
                 if (OnPartChanged != null)
                 {
                     OnPartChanged(timeCost);
