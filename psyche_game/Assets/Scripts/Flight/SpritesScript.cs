@@ -1,13 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class SpriteScript : MonoBehaviour
+public class SpritesScript : MonoBehaviour
 {
-    public Sprite[] sprites;
+    public static Sprite[] sprites;
 
-    public Sprite getSprite(string spriteName){
+    public static Sprite getSprite(string spriteName){
         return Array.Find(sprites, sprite => sprite.name.Equals(spriteName));
     }
 }

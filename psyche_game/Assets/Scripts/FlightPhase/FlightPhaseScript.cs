@@ -12,7 +12,6 @@ public class FlightPhaseScript : MonoBehaviour
     public GameObject boosterRight;
     public GameObject capsule;
     public GameObject sceneSwitch;
-    public GameObject sprites;
 
     private LineRenderer renderer;
     static float deltaTheta; 
@@ -21,24 +20,26 @@ public class FlightPhaseScript : MonoBehaviour
 
     private void Awake() 
     {
-        var theObjectRenderer = theObject.GetComponent<SpriteRenderer>();
-        var boosterLeftRenderer = boosterLeft.GetComponent<SpriteRenderer>();
-        var boosterRightRenderer = boosterRight.GetComponent<SpriteRenderer>();
-        var capsuleRenderer = capsule.GetComponent<SpriteRenderer>();
-        var spriteArraySelector = theObject.GetComponent<SceneSwitch>();
-        var spriteArray = sprites.GetComponent<SpriteScript>();
-
-        theObjectRenderer.sprite = spriteArray.getSprite(spriteArraySelector.getBody());
-        boosterLeftRenderer.sprite = spriteArray.getSprite(spriteArraySelector.getBooster());
-        boosterRightRenderer.sprite = spriteArray.getSprite(spriteArraySelector.getBooster());
-        capsuleRenderer.sprite = spriteArray.getSprite(spriteArraySelector.getCapsule());
-
-
-
         deltaTheta = (2f * Mathf.PI) / vertexCount;
         renderer = GetComponent<LineRenderer>();
         makeCircle();
         InvokeRepeating("moveRocket", .5f, .1f);
+    }
+
+    private void assembleRocket() {
+        var theObjectRenderer = theObject.GetComponent<SpriteRenderer>();
+                var boosterLeftRenderer = boosterLeft.GetComponent<SpriteRenderer>();
+                var boosterRightRenderer = boosterRight.GetComponent<SpriteRenderer>();
+                var capsuleRenderer = capsule.GetComponent<SpriteRenderer>();
+                var spriteArraySelector = theObject.GetComponent<SceneSwitch>();
+
+                theObjectRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBody());
+                boosterLeftRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBooster());
+                boosterRightRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBooster());
+                capsuleRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getCapsule());
+
+
+
     }
     
     private void moveRocket()
