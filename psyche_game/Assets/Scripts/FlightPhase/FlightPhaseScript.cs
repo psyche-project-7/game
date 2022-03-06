@@ -28,15 +28,15 @@ public class FlightPhaseScript : MonoBehaviour
 
     private void assembleRocket() {
         var theObjectRenderer = theObject.GetComponent<SpriteRenderer>();
-                var boosterLeftRenderer = boosterLeft.GetComponent<SpriteRenderer>();
-                var boosterRightRenderer = boosterRight.GetComponent<SpriteRenderer>();
-                var capsuleRenderer = capsule.GetComponent<SpriteRenderer>();
-                var spriteArraySelector = theObject.GetComponent<SceneSwitch>();
+        var boosterLeftRenderer = boosterLeft.GetComponent<SpriteRenderer>();
+        var boosterRightRenderer = boosterRight.GetComponent<SpriteRenderer>();
+        var capsuleRenderer = capsule.GetComponent<SpriteRenderer>();
+        var spriteArraySelector = theObject.GetComponent<SceneSwitch>();
 
-                theObjectRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBody());
-                boosterLeftRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBooster());
-                boosterRightRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBooster());
-                capsuleRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getCapsule());
+        theObjectRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBody());
+        boosterLeftRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBooster());
+        boosterRightRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBooster());
+        capsuleRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getCapsule());
 
 
 
