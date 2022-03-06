@@ -37,9 +37,6 @@ public class FlightPhaseScript : MonoBehaviour
         boosterLeftRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBooster());
         boosterRightRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBooster());
         capsuleRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getCapsule());
-
-
-
     }
     
     private void moveRocket()
