@@ -762,7 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniGameNumber: 3
-  collider: {fileID: 1578734397}
+  collider: {fileID: 1892706262}
 --- !u!114 &1578734402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,7 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32b8b2411a96c74dbdffd202dc474bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: GameScene
+  nextScene: Credits Scene
 --- !u!1 &1892706262
 GameObject:
   m_ObjectHideFlags: 0
