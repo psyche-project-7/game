@@ -64,7 +64,7 @@ public class WireTask : MonoBehaviour
         }
         if ((Time.time - helpStartTime) > helpTime)
         {
-            EditorUtility.DisplayDialog("Are you stuck?", "Drag the left color to it's matching color on the right.", "OK");
+            // EditorUtility.DisplayDialog("Are you stuck?", "Drag the left color to it's matching color on the right.", "OK");
             helpStartTime = Time.time;
         }
     }
