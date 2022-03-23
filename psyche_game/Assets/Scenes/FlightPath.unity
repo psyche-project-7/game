@@ -682,7 +682,7 @@ GameObject:
   - component: {fileID: 1578734402}
   - component: {fileID: 1578734401}
   m_Layer: 0
-  m_Name: GameScene
+  m_Name: Calibration Game
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -762,7 +762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miniGameNumber: 3
-  collider: {fileID: 1892706262}
+  collider: {fileID: 1578734397}
 --- !u!114 &1578734402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,7 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32b8b2411a96c74dbdffd202dc474bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Credits Scene
+  nextScene: Calibration Game
 --- !u!1 &1892706262
 GameObject:
   m_ObjectHideFlags: 0

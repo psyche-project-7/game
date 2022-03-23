@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 8e7c1d27d4a6c0f4bbe80993be14954a
+  - enabled: 1
+    path: Assets/Scenes/CalibrationGame.unity
+    guid: 927d33224e5ab104a9e9319b9e7ad228
   m_configObjects: {}
