@@ -10,9 +10,7 @@ public class MinigameHook : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)    
     {         
         var script = collider.GetComponent<SceneSwitch>();
-        // add static int array to scenechanger and destroy colliders/start pathing based on location
-        //var moveScript = FindObjectByType<FlightPhaseScript>();
-        //moveScript.setHookPos();
+
         if (script.checkPlayed(miniGameNumber))
         {
             return;

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class dragDrop : MonoBehaviour
 {
+    public string partType;
+    public Sprite theSprite;
+
     private Vector3 _dragOffset;
     private Camera _cam;
 
@@ -105,9 +108,11 @@ public class dragDrop : MonoBehaviour
                 transform.position = new Vector3(snapPoints[i].transform.position.x, snapPoints[i].transform.position.y, snapPoints[i].transform.position.z - 0.1f);
                 snapped = true;
                 totalSnapped += 1;
+                SceneSwitch.setPart(partType, theSprite.name);
                 if (OnPartChanged != null)
                 {
                     OnPartChanged(timeCost);
+                    SceneSwitch.setPart(partType, theSprite.name);
                 }
             } else
             {
