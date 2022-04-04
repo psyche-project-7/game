@@ -41,7 +41,7 @@ public class CalibrationGame : MonoBehaviour
                 if (isValid())
                 {
                     wins += 1;
-                    line_speed += .01f;
+                    line_speed += .005f;
                     Debug.Log("Wins " + wins);
                     if (wins == 3)
                     {
@@ -51,8 +51,12 @@ public class CalibrationGame : MonoBehaviour
             }
             else if (line_state == 2)
             {
-                line_state = 0;
-                x_value = 0;
+                if (wins != 3)
+                {
+                    line_state = 0;
+                    x_value = 0;
+                }
+                
                 
             }
 
