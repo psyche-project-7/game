@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogueManager : MonoBehaviour {
+public class MyDialogueManager : MonoBehaviour {
 
 	public Text nameText;
 	public Text dialogueText;
@@ -17,7 +17,7 @@ public class DialogueManager : MonoBehaviour {
 		sentences = new Queue<string>();
 	}
 
-	public void StartDialogue (Dialogue dialogue)
+	public void StartDialogue (MyDialogue dialogue)
 	{
 		animator.SetBool("IsOpen", true);
 

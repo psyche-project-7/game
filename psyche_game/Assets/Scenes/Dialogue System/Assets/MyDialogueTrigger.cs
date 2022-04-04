@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour {
+public class MyDialogueTrigger : MonoBehaviour {
 
-	public Dialogue dialogue;
+	public MyDialogue dialogue;
 
 	public void TriggerDialogue ()
 	{
-		FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+		FindObjectOfType<MyDialogueManager>().StartDialogue(dialogue);
 	}
 
 }
