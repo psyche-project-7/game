@@ -906,7 +906,7 @@ GameObject:
   - component: {fileID: 1578734402}
   - component: {fileID: 1578734401}
   m_Layer: 0
-  m_Name: GameScene
+  m_Name: CalibrationGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -999,7 +999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32b8b2411a96c74dbdffd202dc474bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: GameScene
+  nextScene: CalibrationGame
 --- !u!1 &1870991814
 GameObject:
   m_ObjectHideFlags: 0
