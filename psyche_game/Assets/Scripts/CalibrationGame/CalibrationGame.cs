@@ -50,16 +50,10 @@ public class CalibrationGame : MonoBehaviour
                     }
                 }
             }
-            else if (line_state == 2)
-            {
-                if (wins != 3)
-                {
-                    line_state = 0;
-                    x_value = 0;
-                }
-                
-                
+            if (wins < 3) {
+                Invoke("nextAlignment", 1);
             }
+            
 
         }
 
@@ -108,6 +102,12 @@ public class CalibrationGame : MonoBehaviour
     private void switchScene()
     {
         SceneManager.LoadScene(nextScene);
+    }
+
+    private void nextAlignment()
+    {
+        line_state = 0;
+        x_value = 0;
     }
 
 }

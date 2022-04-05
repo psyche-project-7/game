@@ -203,7 +203,7 @@ Transform:
   m_LocalScale: {x: 2.6874712, y: 2.9506571, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &247719978
 GameObject:
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 382363587}
   - component: {fileID: 382363586}
   - component: {fileID: 382363585}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -468,7 +468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -381, y: -417}
+  m_AnchoredPosition: {x: -339, y: -429}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &382363585
@@ -492,6 +492,7 @@ MonoBehaviour:
       line is pointing at the satellite.
     - You will need to align the signal 3 times! Before you can continue on your
       mission.
+  dialogueManager: {fileID: 1505195739}
 --- !u!114 &382363586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,7 +598,7 @@ GameObject:
   - component: {fileID: 682411269}
   - component: {fileID: 682411271}
   - component: {fileID: 682411270}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,7 +679,7 @@ GameObject:
   - component: {fileID: 709290452}
   - component: {fileID: 709290454}
   - component: {fileID: 709290453}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,7 +828,7 @@ Transform:
   m_LocalScale: {x: 0.025388999, y: 0.025388999, z: 0.8463}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &908820570
 GameObject:
@@ -840,7 +841,7 @@ GameObject:
   - component: {fileID: 908820571}
   - component: {fileID: 908820573}
   - component: {fileID: 908820572}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +967,7 @@ GameObject:
   - component: {fileID: 1543433767}
   - component: {fileID: 1543433766}
   - component: {fileID: 1543433765}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1099,7 +1100,7 @@ GameObject:
   - component: {fileID: 1640064086}
   - component: {fileID: 1640064085}
   - component: {fileID: 1640064084}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: DialogueBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1265,7 +1266,7 @@ Transform:
   m_LocalScale: {x: 0.7435, y: 0.7435, z: 0.7435}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 14.87, y: -19.824, z: -144.553}
 --- !u!1 &1961312080
 GameObject:
@@ -1331,7 +1332,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2077167233
 GameObject:
@@ -1345,7 +1346,7 @@ GameObject:
   - component: {fileID: 2077167236}
   - component: {fileID: 2077167235}
   - component: {fileID: 2077167234}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1427,7 +1428,7 @@ RectTransform:
   - {fileID: 1640064083}
   - {fileID: 382363584}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1445,7 +1446,7 @@ GameObject:
   - component: {fileID: 2096998475}
   - component: {fileID: 2096998477}
   - component: {fileID: 2096998476}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: NPC Name
   m_TagString: Untagged
   m_Icon: {fileID: 0}

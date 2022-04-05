@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,9 +13,14 @@ public class MyDialogueManager : MonoBehaviour {
 
 	private Queue<string> sentences;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake()
+    {
 		sentences = new Queue<string>();
+	}
+
+    // Use this for initialization
+    void Start () {
+		
 	}
 
 	public void StartDialogue (MyDialogue dialogue)
@@ -22,8 +28,14 @@ public class MyDialogueManager : MonoBehaviour {
 		animator.SetBool("IsOpen", true);
 
 		nameText.text = dialogue.name;
-
-		sentences.Clear();
+		try {
+			sentences.Clear();
+		}
+		catch (NullReferenceException ex)
+        {
+			Debug.Log("sentences not set");
+        }
+		
 
 		foreach (string sentence in dialogue.sentences)
 		{
