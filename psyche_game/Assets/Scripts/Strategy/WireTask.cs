@@ -25,6 +25,7 @@ public class WireTask : MonoBehaviour
     private void Start()
     {
         //FindObjectOfType<DialogueTrigger>().TriggerDialogue();
+        Application.targetFrameRate = 60;
         helpStartTime = Time.time;
         _availableColors = new List<Color>(_wireColors);
         _availableLeftWireIndex = new List<int>();
@@ -62,11 +63,6 @@ public class WireTask : MonoBehaviour
         {
             success.text = "Success!";
             Invoke("switchScene", 2);
-        }
-        if ((Time.time - helpStartTime) > helpTime)
-        {
-            EditorUtility.DisplayDialog("Are you stuck?", "Drag the left color to it's matching color on the right.", "OK");
-            helpStartTime = Time.time;
         }
     }
 
