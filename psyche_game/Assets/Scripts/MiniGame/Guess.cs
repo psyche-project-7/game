@@ -11,6 +11,7 @@ public class Guess : MonoBehaviour  {
     public int numberOfGuesses = 10;
     public Button guessButton;
     public Button nextButton;
+    public Image flash;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +34,10 @@ public class Guess : MonoBehaviour  {
         int guessInt = System.Convert.ToInt32(guessString);
         if (guessInt > computersNumber) {
             messageText.text = "Too high. Guess lower";
+            flashScreen(Color.red);
         } else if (guessInt < computersNumber)  {
             messageText.text = "Too low. Guess higher";
+            flashScreen(Color.red);
         } else  {
             messageText.text = "Correct! Click next";
             GameOver();
@@ -43,6 +46,18 @@ public class Guess : MonoBehaviour  {
             messageText.text = "Out of guesses. The answer was " + computersNumber;
             GameOver();
         }
+    }
+
+    void flashScreen(Color c)
+    {
+        flash.color = c;
+        flash.canvasRenderer.SetAlpha(.5f);
+        Invoke("endFlash", .2f);
+    }
+
+    void endFlash()
+    {
+        flash.canvasRenderer.SetAlpha(0);
     }
 
     void GameOver() {
