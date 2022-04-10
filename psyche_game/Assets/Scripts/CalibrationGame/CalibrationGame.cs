@@ -106,10 +106,7 @@ public class CalibrationGame : MonoBehaviour
         }
     }
 
-    private void switchScene()
-    {
-        SceneManager.LoadScene(nextScene);
-    }
+    
 
     private void nextAlignment()
     {
