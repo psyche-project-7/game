@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725def0b3ec77744a929aa32ecd67795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useSprites: []
 --- !u!212 &233814376
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -849,6 +850,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725def0b3ec77744a929aa32ecd67795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useSprites:
+  - {fileID: 21300000, guid: e4163d9094984b54da26c82fe1e32e77, type: 3}
+  - {fileID: 21300000, guid: e0be48ab55b66b64bb1ca17bd029fb82, type: 3}
+  - {fileID: 21300000, guid: 830ee1afe816b584199961305e3d51ad, type: 3}
+  - {fileID: 21300000, guid: c93a4ea53af6fdf4f969320eb572d08b, type: 3}
+  - {fileID: 21300000, guid: 009362599e2fbb34fa7efbbb147a299f, type: 3}
 --- !u!1 &1220278762
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,6 +885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725def0b3ec77744a929aa32ecd67795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useSprites: []
 --- !u!4 &1220278764
 Transform:
   m_ObjectHideFlags: 0
@@ -1044,6 +1052,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725def0b3ec77744a929aa32ecd67795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useSprites: []
 --- !u!212 &1870991820
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1247,6 +1256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725def0b3ec77744a929aa32ecd67795, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useSprites: []
 --- !u!212 &1931903804
 SpriteRenderer:
   m_ObjectHideFlags: 0

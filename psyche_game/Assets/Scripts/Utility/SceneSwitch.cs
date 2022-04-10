@@ -81,8 +81,10 @@ public class SceneSwitch : MonoBehaviour
 
     public void reset()
     {
-        int[] minigamesPlayed = {0, 0, 0, 0};
-        string[] selectedParts = {"", "", ""};
+        int[] minigamePlayed = {0, 0, 0, 0};
+        string[] selectParts = {"", "", ""};
+        minigamesPlayed = minigamePlayed;
+        selectedParts = selectParts;
     }
 
 }
