@@ -44,7 +44,7 @@ public class CalibrationGame : MonoBehaviour
                 if (isValid())
                 {
                     wins += 1;
-<<<<<<< HEAD
+
                     line_speed += .05f;
 
                     Debug.Log("Wins " + wins);
@@ -54,7 +54,7 @@ public class CalibrationGame : MonoBehaviour
                     }
                 }
             }
-<<<<<<< HEAD
+
             if (wins < 3) {
                 Invoke("nextAlignment", 1);
             }
