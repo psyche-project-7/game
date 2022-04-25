@@ -6,7 +6,7 @@ public class Player : MonoBehaviour {
 
     public float speed = 15f;
     public float mapWidth = 20f;
-
+    public string nextScene;
     private Rigidbody2D rb;
 
     void Start ()
@@ -27,6 +27,12 @@ public class Player : MonoBehaviour {
 
     void onCollisionEnter2d ()
     {
-        Debug.Log("We got Hit!!!");
+        FindObjectOfType<GameManager>().EndGame();
+
+    }
+
+    private void switchScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 }
