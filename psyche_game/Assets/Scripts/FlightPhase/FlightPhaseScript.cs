@@ -17,10 +17,16 @@ public class FlightPhaseScript : MonoBehaviour
     static float theta = 0f;
     int j = 0;
 
+    static bool modelChosen = false;
+
     private void Awake() 
     {
         deltaTheta = (2f * Mathf.PI) / vertexCount;                
         InvokeRepeating("moveRocket", .5f, .1f);
+        if (!modelChosen){
+            Invoke("assembleRocket", 0.5f);
+        }
+
     }
 
     private void assembleRocket() {
@@ -30,10 +36,15 @@ public class FlightPhaseScript : MonoBehaviour
         var capsuleRenderer = capsule.GetComponent<SpriteRenderer>();
         var spriteArraySelector = theObject.GetComponent<SceneSwitch>();
 
+//        Debug.Log(SpritesScript.getSprite(spriteArraySelector.getBody()));
+//        Debug.Log(SpritesScript.getSprite(spriteArraySelector.getBooster()));
+//        Debug.Log(SpritesScript.getSprite(spriteArraySelector.getCapsule()));
+
         theObjectRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBody());
         boosterLeftRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBooster());
         boosterRightRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getBooster());
         capsuleRenderer.sprite = SpritesScript.getSprite(spriteArraySelector.getCapsule());
+        modelChosen = true;
     }
     
     private void moveRocket()

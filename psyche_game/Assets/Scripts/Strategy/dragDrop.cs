@@ -25,6 +25,19 @@ public class dragDrop : MonoBehaviour
     public delegate void PartChanged(int timeChange);
     public static event PartChanged OnPartChanged;
 
+    public float smoothTime = 0.3F;
+    private Vector3 velocity = Vector3.zero;
+
+    public Transform target;
+    Vector3 targetPosition;
+    private Vector3 initialTakeOffPosition;
+
+    void Start()
+    {
+        initialTakeOffPosition = transform.position;
+        targetPosition = target.TransformPoint(new Vector3(0f, 30.0f, 0f));
+    }
+
     private void Awake()
     {
         _cam = Camera.main;
@@ -47,18 +60,15 @@ public class dragDrop : MonoBehaviour
 
     private void Update()
     {
-        if (fadeOutPart && snapped)
+        if (snapped && fadeOutPart)
         {
-            Color rocketPartColor = this.GetComponent<Renderer>().material.color;
-            float fadeAmount = rocketPartColor.a - (fadeSpeed * Time.deltaTime);
-            rocketPartColor = new Color(rocketPartColor.r, rocketPartColor.g, rocketPartColor.b, fadeAmount);
-            this.GetComponent<Renderer>().material.color = rocketPartColor;
-
-            if (rocketPartColor.a <= 0)
-            {
-                fadeOutPart = false;
-            }
+            Invoke("flyUp", 2f);
         }
+    }
+
+    public void flyUp()
+    {
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }
 
     private void beginRocketLaunchSequence()
