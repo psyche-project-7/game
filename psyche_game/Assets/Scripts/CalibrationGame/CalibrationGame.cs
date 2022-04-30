@@ -23,7 +23,9 @@ public class CalibrationGame : MonoBehaviour
         _lineRender = GetComponent<LineRenderer>();
         line_state = 0;
         x_value = 0.0f;
+
         line_speed = 0.1f;
+
         wins = 0;
         valid = false;
 
@@ -42,7 +44,9 @@ public class CalibrationGame : MonoBehaviour
                 if (isValid())
                 {
                     wins += 1;
+
                     line_speed += .05f;
+
                     Debug.Log("Wins " + wins);
                     if (wins == 3)
                     {
@@ -50,10 +54,12 @@ public class CalibrationGame : MonoBehaviour
                     }
                 }
             }
+
             if (wins < 3) {
                 Invoke("nextAlignment", 1);
             }
             
+
 
         }
 
@@ -92,6 +98,7 @@ public class CalibrationGame : MonoBehaviour
         if (x_value < -3.8 && x_value > -8)
         {
             return true;
+
         }
         else
         {
@@ -99,15 +106,19 @@ public class CalibrationGame : MonoBehaviour
         }
     }
 
-    private void switchScene()
-    {
-        SceneManager.LoadScene(nextScene);
-    }
+    
 
     private void nextAlignment()
     {
         line_state = 0;
         x_value = 0;
     }
+
+
+    private void switchScene()
+    {
+        SceneManager.LoadScene(nextScene);
+    }
+
 
 }

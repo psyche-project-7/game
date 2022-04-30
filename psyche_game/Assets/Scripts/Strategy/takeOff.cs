@@ -7,7 +7,6 @@ public class takeOff : MonoBehaviour
 
     public ParticleSystem combustion;
 
-
     void OnEnable()
     {
         LaunchButton.OnRocketLaunchRequest += beginRocketLaunchSequence;

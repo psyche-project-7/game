@@ -8,6 +8,7 @@ public class SpritesScript : MonoBehaviour
     public Sprite[] useSprites;
 
     public static Sprite getSprite(string spriteName){
+        Debug.Log(Array.Find(sprites, sprite => sprite.name.Equals(spriteName)));
         return Array.Find(sprites, sprite => sprite.name.Equals(spriteName));
     }
 

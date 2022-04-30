@@ -431,6 +431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: FlightPath
+<<<<<<< HEAD
 --- !u!1 &382363583
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,6 +749,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 709290451}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> origin/origin/US155/Music
 --- !u!1 &775106336
 GameObject:
   m_ObjectHideFlags: 0
